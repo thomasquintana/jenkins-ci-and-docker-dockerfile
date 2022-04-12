@@ -28,4 +28,3 @@ RUN set -e; \
 
 # Drop back to the regular jenkins user - good practice.
 USER jenkins
-
