@@ -1,6 +1,6 @@
-ARG arch=amd64
+ARG DIGEST
 
-FROM --platform=linux/${arch} jenkins/jenkins:lts-jdk11
+FROM jenkins/jenkins:lts-jdk11${DIGEST}
 
 LABEL org.opencontainers.image.authors="thomas.quintana@gmail.com"
 
@@ -26,3 +26,4 @@ RUN set -e; \
 
 # Drop back to the regular jenkins user - good practice.
 USER jenkins
+
